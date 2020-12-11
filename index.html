@@ -1,0 +1,69 @@
+<!--Muhammad Gusti Herjuno-->
+<!--TI 2B-->
+
+<html>
+    <head>
+        <title>Beranda</title>
+        <link rel="stylesheet" type="text/css" href="Css.css">
+        <script src='jquery-3.5.1.js'></script>
+        <script>
+            var i=0;
+            $(document).ready(function(){
+                $('#slider img').hide();
+                showNextImage();
+                setInterval('showNextImage()', 3000);
+            });
+            
+            function showNextImage(){
+                i++;
+                $('#sliderImage' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+                if(i==4){
+                    i=0;
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <!--HEADER-->
+        <div class="header">
+            <a href="#default" class="Logo">Pizza Ria</a>
+        <div class="header-right">
+            <a class="active" href="index.html">Beranda</a>
+            <a href="Tentang.html">Tentang</a>
+            <a href="Order.html">Order</a>
+            <a href="Profil.html">Profil</a>
+        </div>
+        </div>
+
+        <!--KONTEN-->
+        <div class="Konten">
+            <div id="slider">
+                <img id="sliderImage1" src="/img/Pizza1.jpg">
+                    
+                <img id="sliderImage2" src="/img/Pizza2.jpg">
+    
+                <img id="sliderImage3" src="/img/Pizza3.jpg">
+    
+                <img id="sliderImage4" src="/img/Pizza4.jpg">
+            </div>
+            
+        <div id="background1">
+            <img src="/img/pizza.jpg" alt="">
+        </div>
+           
+            <H2>RESTORAN PIZZA TERBAIK DI INDONESIA</H2>
+            <p>Kami menyajikan pizza yang berkualitas tinggi. Dan kami memastikan bahwa pizza
+                yang anda pesan berasal dari bahan-bahan yang segar dan didapat dari komoditas lokal.
+                Kami menggunakan bahan-bahan terbaik yang mementingkan mutu dan kualitas demi pelanggan
+                kami.
+            </p>
+            <br>
+            <a href="Order.html"><button class="button" style="vertical-align:middle"><span>ORDER </span></button></a>
+        </div>
+
+        <!--FOOTER-->
+        <div class="footer">
+            <P>© 2020 Pizza Ria. All right Reserved. </P>
+        </div>
+    </body>
+</html>

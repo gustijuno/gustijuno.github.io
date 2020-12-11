@@ -1,0 +1,90 @@
+<!--Muhammad Gusti Herjuno-->
+<!--TI 2B-->
+
+<html>
+    <head>
+        <title>Tentang</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="Css.css">
+
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize(){
+                var propertiPeta ={
+                    center:new google.maps.LatLng(-8.065062959295098, 111.9006872177124),
+                    zoom:10,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP
+                };
+                var peta= new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+                // membuat Marker
+                var marker=new google.maps.Marker({
+                    position: new google.maps.LatLng(-8.065062959295098, 111.9006872177124),
+                    map: peta,
+                    animation:google.maps.Animation.BOUNCE
+                });
+            }
+
+            google.maps.event.addDomListener(window,'load',initialize);
+        </script>
+    </head>
+
+
+    <body>
+         <!--HEADER-->
+         <div id="background">
+         <div class="header">
+            <a href="index.html" class="Logo">Pizza Ria</a>
+        <div class="header-right">
+            <a href="index.html">Beranda</a>
+            <a class="active" href="Tentang.html">Tentang</a>
+            <a href="Order.html">Order</a>
+            <a href="Profil.html">Profil</a>
+        </div>
+        </div>
+    
+
+        <!--KONTEN-->
+        <div class="container-satu">
+            <div class="kolom-utama">
+                <h1>Profil Pizza Ria</h1>
+                <p>Restoran ini di buka tahun 2020 dengan pembuat bernama Muhammad Gusti Herjuno. Muhammad Gusti Herjuno sudah
+                    menekuni dunia pizza sejak lama dan impiannya membuka resto pizza begitu besar. Restoran ini berfokus pada menu 
+                    pizza. Terdapat banyak jenis pizza dari seluruh dunia dan yang paling terkenal pizza versi italia dan amerika.
+                </p>
+                <p>Kami menyajikan cita rasa pizza yang otentik. Kami mendatangkan para chef profesional di bidang pizza.
+                    Kami juga mendatangkan bahan-bahan segar dari penjual lokal untuk mendorong ekonomi lokal berkembang, dan Kami
+                    juga mendatangkan bahan-bahan otentik pizza yang tidak terdapat di Indonesia. Adonan kami buat dengan presisi
+                    tinggi sehingga menghasilkan pizza yang lezat.
+                </p>
+                <p>Restoran kami buka setiap hari jam 10.00 - 22.00. Dan alamat kami berada di Jl.Panglima Sudirman No.72, Tulungagung
+                    Kami juga menerima pesanan dalam jumlah besar.
+                </p>
+
+                contact person : 083432442 <br>
+                instagram      : @pizzaria <br>
+                email          : pizzaria@gmail.com <br><br>
+
+                <h2>Posisi Restoran Pizza Ria</h2>
+                <div id="googleMap" style="width: 100%;height: 380px;"></div>
+
+            </div>
+
+            <div class="sidebar-dua">
+                <img src="/img/restoran.jpg" alt="">
+                <br>
+                <img src="/img/restoran2.jpg" alt="">
+                <br>
+                <img src="/img/restoran3.jpg" alt="">
+                
+            </div>
+        </div>
+        
+
+        <!--FOOTER-->
+        <div class="footer">
+            <P>© 2020 Pizza Ria. All right Reserved. </P>
+        </div>
+        </div>
+    </body>
+</html>
